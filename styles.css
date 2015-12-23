@@ -25,7 +25,7 @@ p:first-child, .hero {
 	margin-top: 0;
 }
 
-header, main, footer, section {
+header, footer, section {
 	padding: 7.5vh 0;
 }
 
@@ -34,15 +34,47 @@ header, main, footer, section {
 	border: 1px solid #eee;
 }
 
-.article, .card {
+main, .gray {
+	padding: 2vw;
+}
+
+.organizations, .loader {
+	margin: 0 auto;
+	transition: 0.5s opacity;
+}
+
+.loader {
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+article, .contributor {
 	background: #fff;
-	margin-bottom: 2.5rem;
 	font-size: 90%;
 	padding: 25px;
+	margin-bottom: 2vw;
+	box-sizing: border-box;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 	border: 1px solid #eee;
+	width: 300px;
 	transition: 0.3s;
 	border-radius: 2px;
+}
+.contributor {
+	width: 220px;
+	text-align: center;
+}
+
+.contributor img {
+	display: block;
+	margin: 0 auto 20px auto;
+	border-radius: 100%;
+}
+
+.gutter-sizer, .contributor-sizer {
+	width: 2vw;
 }
 
 .article h2 {
@@ -90,22 +122,12 @@ main a {
 	height: 100%;
 }
 
-.center-allcap h3 {
+h3 {
 	font-weight: normal;
 	margin-top: 0;
-	margin-bottom: 7.5vh;
+	margin-bottom: 2vw;
 	color: #888;
 	text-align: center;
-}
-
-.people {
-	text-align: center;
-}
-
-.people img {
-	display: block;
-	margin: 0 auto 20px auto;
-	border-radius: 100%;
 }
 
 pre {
@@ -130,17 +152,17 @@ footer a {
 	font-weight: bold;
 }
 
-.people .links {
+.contributor .links {
 	letter-spacing: 5px;
 	margin-top: 10px;
 	font-size: 125%;
 }
 
-.people .links a {
+.contributor .links a {
 	color: #555;
 }
 
-.people a:hover {
+.contributor a:hover {
 	color: #69e;
 }
 
