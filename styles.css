@@ -13,7 +13,7 @@ a {
 
 body {
 	font-family: "Hind", sans-serif;
-	line-height: 1.68;
+	line-height: 1.68;a
 }
 
 .hero {
@@ -60,6 +60,7 @@ article, .contributor {
 	border: 1px solid #eee;
 	width: 300px;
 	transition: 0.3s;
+	float: left;
 	border-radius: 2px;
 }
 .contributor {
