@@ -41,6 +41,7 @@ main, .gray {
 .organizations, .loader {
 	margin: 0 auto;
 	transition: 0.5s opacity;
+	text-align: center;
 }
 
 .loader {
@@ -51,7 +52,9 @@ main, .gray {
 }
 
 article, .contributor {
+	text-align: left;
 	background: #fff;
+	display: inline-block;
 	font-size: 90%;
 	padding: 25px;
 	margin-bottom: 2vw;
