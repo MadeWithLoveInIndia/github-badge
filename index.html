@@ -188,8 +188,17 @@
 
 			document.addEventListener("DOMContentLoaded", function() {
 
+				var maxHeight = 0;
+
 				for (i = 0; i < document.querySelectorAll("article").length; i++) {
+					if (document.querySelectorAll("article").offsetHeight > maxHeight) {
+						maxHeight = document.querySelectorAll("article").offsetHeight;
+					}
 					document.querySelectorAll("article .logo")[i].style.background = document.querySelectorAll("article")[i].getAttribute("data-color");
+				}
+				
+				for (i = 0; i < document.querySelectorAll("article").length; i++) {
+					document.querySelectorAll("article").style.height = maxHeight;
 				}
 
 				var elem = document.querySelector(".organizations");
