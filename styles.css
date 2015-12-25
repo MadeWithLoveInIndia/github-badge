@@ -58,6 +58,7 @@ article, .contributor {
 	font-size: 90%;
 	padding: 25px;
 	margin-bottom: 2vw;
+	margin-left: -2px;
 	margin-right: 1.5vw;
 	box-sizing: border-box;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
