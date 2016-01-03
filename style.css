@@ -95,8 +95,8 @@ pre {
 }
 
 @media (max-width: 600px) {
-	header, footer {
-		padding: 15px !important;
+	header .container, footer .container {
+		padding: 0 !important;
 	}
 }
 
