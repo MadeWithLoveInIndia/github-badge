@@ -17,8 +17,10 @@ function one() {
 				maxHeight = elts[j].querySelector(".-one").offsetHeight;
 			}
 		}
-		for (j = 0; j < elts.length; j++) {
-			elts[j].querySelector(".-one").style.height = maxHeight + "px";
+		if (window.innerWidth > 600) {
+			for (j = 0; j < elts.length; j++) {
+				elts[j].querySelector(".-one").style.height = maxHeight + "px";
+			}
 		}
 	}
 }
