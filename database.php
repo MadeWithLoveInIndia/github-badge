@@ -1235,7 +1235,29 @@ function sendAnEmail($to, $subject, $body, $fromName = "Made with Love in India"
   //   // echo 'Message could not be sent.';
   //   // echo 'Mailer Error: ' . $mail->ErrorInfo;
   // }
-  mail($to, $subject, $body);
+  $url = 'https://api.oswaldlabs.com/mailer/index.php';
+  include "emailpassword.php";
+  $data = array(
+    'from_name' => $fromName,
+    'from_email' => 'hello@madewithlove.org.in',
+    'from_password' => $password,
+    'to_email' => $to,
+    'subject' => $subject,
+    'body' => $body,
+  );
+  $options = array(
+      'http' => array(
+          'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+          'method'  => 'POST',
+          'content' => http_build_query($data)
+      )
+  );
+  $context  = stream_context_create($options);
+  $result = file_get_contents($url, false, $context);
+  if ($result === FALSE) {
+    echo "<h1>ERROR SENDING EMAIL</h1>";
+  }
+  // mail($to, $subject, $body);
 }
 
 function obfuscate_email($email)
