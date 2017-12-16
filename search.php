@@ -14,7 +14,7 @@
 	$type = $currentURL[4];
 	$sort = str_replace("sort=", "", explode("?", $_SERVER[REQUEST_URI])[1]);
 	if (!$sort) {
-		$sort = "oldest";
+		$sort = "featured";
 		$suffix = null;
 	} else {
 		$suffix = "?sort=" . $sort;
@@ -30,6 +30,15 @@
 			break;
 		case "za":
 			$orderBy = "name DESC";
+			break;
+		case "featured":
+			if ($currentURL[3] == "startups") {
+				$orderBy = "badge_unicorn DESC, badge_featured DESC, badge_newsworthy DESC, badge_offers DESC, badge_verified DESC, badge_addedbadge DESC, name ASC";
+			} else if ($currentURL[3] == "people") {
+				$orderBy = "emailverified DESC, link_website DESC, link_facebook DESC, link_twitter DESC, link_linkedin DESC, university1 DESC, university2 DESC, university3 DESC, name ASC";
+			} else {
+				$orderBy = "id ASC";
+			}
 			break;
 		default:
 			$orderBy = "id ASC";
@@ -179,8 +188,9 @@
 					<div class="card-body pb-1">
 						<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><?php echo $title; ?></h4>
 						<select class="form-control absolute-select" onchange="window.location.href = '<?php echo "/$currentURL[3]/$currentURL[4]/$currentURL[5]"; ?>' + this.value">
-							<option<?php if ("?" . explode("?", $_SERVER[REQUEST_URI])[1] == "?sort=oldest") { echo " selected"; } ?> value="?sort=oldest">Oldest First</option>
+							<option<?php if ("?" . explode("?", $_SERVER[REQUEST_URI])[1] == "?sort=featured") { echo " selected"; } ?> value="?sort=featured">Featured</option>
 							<option<?php if ("?" . explode("?", $_SERVER[REQUEST_URI])[1] == "?sort=recent") { echo " selected"; } ?> value="?sort=recent">Most Recent First</option>
+							<option<?php if ("?" . explode("?", $_SERVER[REQUEST_URI])[1] == "?sort=oldest") { echo " selected"; } ?> value="?sort=oldest">Oldest First</option>
 							<option<?php if ("?" . explode("?", $_SERVER[REQUEST_URI])[1] == "?sort=az") { echo " selected"; } ?> value="?sort=az">A to Z</option>
 							<option<?php if ("?" . explode("?", $_SERVER[REQUEST_URI])[1] == "?sort=za") { echo " selected"; } ?> value="?sort=za">Z to A</option>
 						</select>
@@ -234,13 +244,13 @@
 						<div class="text-muted text-center p-4">
 							<h1><i class="ion ion-ios-person bigger"></i></h1>
 							<h4 class="h6">There are no people listed.</h4>
-							<p>Know of someone? <a href="/suggest">Tell us</a>.</p>
+							<p>Know of someone? <a href="/contribute">Tell us</a>.</p>
 						</div>
 						<?php } else { ?>
 						<div class="text-muted text-center p-4">
 							<h1><i class="ion ion-ios-briefcase bigger"></i></h1>
 							<h4 class="h6">There are no startups listed.</h4>
-							<p>Know of a startup? <a href="/suggest">Tell us</a>.</p>
+							<p>Know of a startup? <a href="/contribute">Tell us</a>.</p>
 						</div>
 						<?php } } ?>
 					</div>
@@ -285,7 +295,7 @@
 						</span>
 					</div>
 				</form>
-				<div class="card mb-4">
+				<!-- <div class="card mb-4">
 					<div class="card-body pb-1">
 						<?php display('<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">%s</h4>', "Discover People"); ?>
 					</div>
@@ -327,7 +337,7 @@
 							</div>
 						</a>
 					</div>
-				</div>
+				</div> -->
 				<?php } else { ?>
 				<form onsubmit="window.location.href = '/search/' + encodeURIComponent(document.querySelector('.searchinput').value); return false" class="mb-4">
 					<div class="input-group">

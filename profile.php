@@ -216,6 +216,11 @@
 									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not founded any startups yet.</h4>
 								</div>
 								<?php } ?>
+								<?php if (sizeof($myStartups) > 3) ?>
+								<a href="/profile/<?php echo $profile["username"]; ?>/startups" class="list-group-item list-group-item-action text-center p-3">
+									<h3 class="h6 mb-0">View <?php echo numberify(sizeof($myStartups), 3); ?> more startups<i class="ion ion-ios-arrow-down ml-2"></i></h3>
+								</a>
+								<?php ?>
 							</div>
 						</div>
 						<div class="card mb-4">
@@ -428,6 +433,7 @@
 						<div class="card mb-4">
 							<div class="card-body pb-1">
 								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">Message</h4>
+								<p class="mt-3"><strong>How messaging works on Made with Love in India: </strong>When you use the following form to message <?php echo explode(" ", $profile["name"])[0]; ?>, your message will be sent as an email. <?php echo $profile["gender"] == "M" ? " He" : " She"; ?> can then choose to reply, which you will receive on your email.</p>
 								<form class="mt-3 mb-3" action="/message" method="post">
 									<div class="form-group">
 										<label for="email">Your Email</label>

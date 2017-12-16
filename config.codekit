@@ -998,6 +998,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/DOWrB9OWAAACAnj.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 395598,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/DOWrB9OWAAACAnj.jpg",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/DOWrB9OWAAACAnj.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/dr-b-r-ambedkar-open-university-square-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,

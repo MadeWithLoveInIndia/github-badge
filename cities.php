@@ -82,8 +82,37 @@
 					</div>
 					<div class="col-md-4">
 						<div class="card mb-4">
-							<div class="card-body">
-								ob_clean
+							<div>
+								<div class="card-body">
+									<?php display('<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Share %s</h4>', "Cities"); ?>
+									<div class="row">
+										<div class="col">
+											<a target="_blank" href="https://twitter.com/share?text=<?php echo urlencode("#MadewithLoveinIndia @mwlii"); ?>&url=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" class="btn btn-twitter btn-block">
+												<i class="ion ion-logo-twitter"></i>
+											</a>
+										</div>
+										<div class="col pl-0">
+											<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" class="btn btn-facebook btn-block">
+												<i class="ion ion-logo-facebook"></i>
+											</a>
+										</div>
+										<div class="col pl-0">
+											<a target="_blank" href="https://www.linkedin.com/cws/share?url=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" class="btn btn-linkedin btn-block">
+												<i class="ion ion-logo-linkedin"></i>
+											</a>
+										</div>
+										<div class="col pl-0 d-none d-md-block">
+											<a target="_blank" href="http://plus.google.com/share?url=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" class="btn btn-google btn-block">
+												<i class="ion ion-logo-googleplus"></i>
+											</a>
+										</div>
+										<div class="col pl-0 d-md-none d-lg-none d-xl-none">
+											<a target="_blank" href="whatsapp://send?text=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" class="btn btn-success btn-block">
+												<i class="ion ion-logo-whatsapp"></i>
+											</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

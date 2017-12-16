@@ -180,7 +180,7 @@
 								<div class="text-muted text-center p-4">
 									<h1><i class="ion ion-ios-list-box bigger"></i></h1>
 									<h4 class="h6">This section is currently empty.</h4>
-									<p>Do you know about <?php echo $profile["name"]; ?>? <a href="/suggest">Contribute info.</a></p>
+									<p>Do you know about <?php echo $profile["name"]; ?>? <a href="/contribute">Contribute info.</a></p>
 								</div>
 								<?php } ?>
 							</div>
@@ -198,7 +198,7 @@
 									display('<a href="/profile/%s" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
-											<img alt="Startup Name" src="%s">
+											<img alt="Startup Name" src="%s" class="rounded-circle">
 										</div>
 										<div class="startup-info d-flex align-items-center">
 											<div>
@@ -696,7 +696,7 @@
 									<div class="text-muted text-center p-4">
 										<h1><i class="ion ion-ios-list-box bigger"></i></h1>
 										<h4 class="h6">This section is currently empty.</h4>
-										<p>Do you know about <?php echo $profile["name"]; ?>? <a href="/suggest">Contribute info.</a></p>
+										<p>Do you know about <?php echo $profile["name"]; ?>? <a href="/contribute">Contribute info.</a></p>
 									</div>
 									<?php } ?>
 								</div>
@@ -715,7 +715,7 @@
 											display('<a href="/profile/%s" class="list-group-item list-group-item-action">
 											<div class="d-flex flex-row">
 												<div class="education-image mr-3">
-													<img alt="Startup Name" src="%s">
+													<img alt="Startup Name" src="%s" class="rounded-circle">
 												</div>
 												<div class="startup-info d-flex align-items-center">
 													<div>

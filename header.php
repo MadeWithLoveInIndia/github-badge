@@ -54,6 +54,8 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 		<link rel="prev" href="<?php echo $prev; ?>">
 		<?php } ?>
 
+		<script>var host="madewithlove.org.in";host==window.location.host&&"https:"!=window.location.protocol&&(window.location.protocol="https");</script>
+
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=ngkxyOrw9y">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=ngkxyOrw9y">
 		<link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png?v=ngkxyOrw9y">
@@ -142,7 +144,7 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 								<a class="dropdown-item" href="/responsibilities">Responsibilities</a>
 								<a class="dropdown-item" href="/badges">Badges</a>
-								<a class="dropdown-item" href="/industries">Industries</a>
+								<!-- <a class="dropdown-item" href="/industries">Industries</a> -->
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="/settings">Settings</a>
 								<a class="dropdown-item" href="<?php echo "/logout?returnto=$_SERVER[REQUEST_URI]"; ?>">Logout</a>
@@ -198,12 +200,11 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 				<div class="container pt-5 pb-5">
 					<div class="row">
 						<div class="col-6 col-md-3">
-							<h4 class="card-title pb-2 mb-0 bigger">Find Startups</h4>
+							<h4 class="card-title pb-2 mb-0 bigger">Community</h4>
 							<ul>
-								<li><a href="/startups">Top Startups in India</a></li>
+								<li><a href="/startups">Newest Startups</a></li>
 								<li><a href="/cities">Startup Cities</a></li>
-								<li><a href="/industries">Popular Industries</a></li>
-								<li><a href="/tags">Tags &amp; Categories</a></li>
+								<li><a href="/people">Entrepreneurs</a></li>
 							</ul>
 						</div>
 						<div class="col-6 col-md-3">
@@ -255,6 +256,28 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 			}
 			gtag("js", new Date());
 			gtag("config", "UA-58910975-1");
+		</script>
+		<script>
+		!function() {
+			var t;
+			if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+			t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+			t.factory = function(e) {
+				return function() {
+					var n;
+					return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+				};
+			}, t.methods.forEach(function(e) {
+				t[e] = t.factory(e);
+			}), t.load = function(t) {
+				var e, n, o, i;
+				e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+				o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+				n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+			});
+		}();
+		drift.SNIPPET_VERSION = "0.3.1";
+		drift.load("pdkyumfg4tdi");
 		</script>
 
 
