@@ -1,0 +1,25 @@
+{
+  "name": "made-with-love-in-india",
+  "version": "4.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/AnandChowdhary/made-with-love-in-india.git",
+  "author": "Anand Chowdhary <anandchowdhary@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "offline-plugin": "^4.9.0",
+    "onchange": "^3.3.0",
+    "poi": "^9.6.13",
+    "prettier": "^1.11.1",
+    "sass-loader": "^6.0.7"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/vue-fontawesome": "^0.0.22",
+    "bootstrap-vue": "^2.0.0-rc.2",
+    "firebase": "^4.11.0",
+    "vue": "^2.5.16",
+    "vue2-google-maps": "^0.8.11",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
