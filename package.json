@@ -5,6 +5,12 @@
   "repository": "https://github.com/AnandChowdhary/made-with-love-in-india.git",
   "author": "Anand Chowdhary <anandchowdhary@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start:dev": "poi",
+    "start:prettify": "onchange '**/*.{js,vue}' -- prettier --use-tabs --print-width 100 --write {{changed}}",
+    "prettify": "prettier --use-tabs --print-width 100 --write ./src/**/*.{js,vue}",
+    "deploy": "poi build && firebase deploy"
+  },
   "devDependencies": {
     "node-sass": "^4.7.2",
     "offline-plugin": "^4.9.0",
