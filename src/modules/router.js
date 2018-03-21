@@ -2,16 +2,17 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import smartquotes from "smartquotes";
 
+import Submit from "../components/pages/Submit.vue";
 import Error404 from "../components/pages/Error404.vue";
 
 const routes = [
-	// {
-	// 	path: "/",
-	// 	component: Home,
-	// 	meta: {
-	// 		title: "DrillMaps"
-	// 	}
-	// }
+	{
+		path: "/submit",
+		component: Submit,
+		meta: {
+			title: "Submit Startup"
+		}
+	},
 	{
 		path: "*",
 		component: Error404,

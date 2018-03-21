@@ -16,6 +16,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import css from "./styles.scss";
 
+// Components
+import Navbar from "./components/Navbar.vue";
+
 // Vue.use(VueGoogleMaps, {
 // 	load: {
 // 		key: constants.api_keys.googlemaps,
@@ -52,7 +55,7 @@ const app = new Vue({
 	render() {
 		return (
 			<div>
-				{/* <Navbar user={this.user} cart={this.cart} /> */}
+				<Navbar />
 				<transition name="fade" mode="out-in">
 					<router-view />
 				</transition>
