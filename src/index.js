@@ -2,23 +2,28 @@ import Vue from "vue";
 import Toasted from "vue-toasted";
 import BootstrapVue from "bootstrap-vue";
 import * as VueGoogleMaps from "vue2-google-maps";
-import css from "./styles.scss";
-import constants from "./modules/constants";
 
+// Modules
+import constants from "./modules/constants";
+import router from "./modules/router";
+import store from "./modules/store";
+
+// Polyfills
 import "whatwg-fetch";
+
+// Styling
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+import css from "./styles.scss";
 
-Vue.use(VueGoogleMaps, {
-	load: {
-		key: constants.api_keys.googlemaps,
-		libraries: "places"
-	}
-});
+// Vue.use(VueGoogleMaps, {
+// 	load: {
+// 		key: constants.api_keys.googlemaps,
+// 		libraries: "places"
+// 	}
+// });
 Vue.use(Toasted);
 Vue.use(BootstrapVue);
-
-console.log("Hello, world!");
 
 // Progressive Web App support
 if (process.env.NODE_ENV === "production") {
@@ -33,6 +38,8 @@ const app = new Vue({
 			products: []
 		}
 	},
+	router,
+	store,
 	methods: {
 		toast(text) {
 			this.$toasted.show(text, {
@@ -45,11 +52,11 @@ const app = new Vue({
 	render() {
 		return (
 			<div>
-				{/* <Navbar user={this.user} cart={this.cart} />
+				{/* <Navbar user={this.user} cart={this.cart} /> */}
 				<transition name="fade" mode="out-in">
 					<router-view />
 				</transition>
-				<Footer /> */}
+				{/* <Footer /> */}
 			</div>
 		);
 	}
