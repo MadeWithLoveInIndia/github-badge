@@ -1,4 +1,7 @@
 # Made with Love in India
+
+![Made with Love in India](https://madewithlove.org.in/badge.svg)
+
 Founded in April 2013, the Made with Love in India initiative is a movement to celebrate, promote, and build a brand — India.
 
 The initiative is based on the foundation that a small thing, a simple gesture, can brighten up someone's day and remind them that they should be proud of helping local entrepreneurs who contribute largely to the economy.
@@ -8,3 +11,11 @@ On this website, you'll find a list of brands and products that are created in I
 ## You too?
 
 Throw in a pull request with your website at the bottom of the list (don't worry, the list is randomized.)
+
+## GitHub badge
+
+Add the Made with Love in India badge on your GitHub repo:
+
+```markdown
+![Made with Love in India](https://madewithlove.org.in/badge.svg)
+```
