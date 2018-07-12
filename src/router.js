@@ -16,6 +16,69 @@ export default new Router({
       path: "/about",
       name: "about",
       component: About
+    },
+    {
+      path: "/login"
+    },
+    {
+      path: "/register"
+    },
+    {
+      path: "/recover"
+    },
+    {
+      path: "/reset"
+    },
+    {
+      path: "/responsibilities"
+    },
+    {
+      path: "/badges"
+    },
+    {
+      path: "/industries"
+    },
+    {
+      path: "/terms"
+    },
+    {
+      path: "/privacy"
+    },
+    {
+      path: "/cookies"
+    },
+    {
+      path: "/a11y"
+    },
+    {
+      path: "/cities"
+    },
+    {
+      path: "/city/:city"
+    },
+    {
+      path: "/people"
+    },
+    {
+      path: "/profile/:username"
+    },
+    {
+      path: "/startups",
+      alias: "/projects"
+    },
+    {
+      path: "/startups/:tag",
+      alias: "/projects/:tag"
+    },
+    {
+      path: "/startup/:slug",
+      alias: "/project/:slug"
+    },
+    {
+      path: "/blog"
+    },
+    {
+      path: "/blog/:slug"
     }
   ]
 });
