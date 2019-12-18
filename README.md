@@ -19,3 +19,12 @@ Add the Made with Love in India badge on your GitHub repo:
 ```markdown
 ![Made with Love in India](https://madewithlove.org.in/badge.svg)
 ```
+
+## ⚠️ New version
+
+This branch, `staart`, is the development branch of Made with Love in India's new website using [Staart](https://staart.js.org). The currently published website written in PHP is available in the [`master`](https://github.com/AnandChowdhary/made-with-love-in-india/tree/master) branch.
+
+## 📄 License
+
+- Code: [MIT](/LICENSE)
+- Logo and assets: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
